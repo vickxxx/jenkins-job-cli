@@ -7,3 +7,4 @@
 jenkins-job-cli
 /trush/
 /_build/
+.DS_Store

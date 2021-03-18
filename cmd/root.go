@@ -19,11 +19,12 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	"github.com/gocruncher/jenkins-job-cli/cmd/jj"
-	"github.com/spf13/cobra"
 	"io"
 	"os"
 	"time"
+
+	"github.com/gocruncher/jenkins-job-cli/cmd/jj"
+	"github.com/spf13/cobra"
 )
 
 const (

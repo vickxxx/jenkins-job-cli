@@ -4,11 +4,12 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"os"
 	"strconv"
 	"strings"
+
+	"gopkg.in/yaml.v2"
 )
 
 // External API
@@ -254,6 +255,8 @@ func Build(env Env, job string, query string) (error, string) {
 	if len(query) > 0 {
 		target = "/buildWithParameters?" + query
 	}
+	fmt.Println("job/" + job + target)
+	// panic("stop")
 	code, rsp, headers, err := req(env, "POST", "job/"+job+target, []byte{})
 	if err != nil {
 		return err, ""
@@ -263,6 +266,8 @@ func Build(env Env, job string, query string) (error, string) {
 	}
 	location := headers["Location"][0]
 	splitedUrl := strings.Split(location, "/")
+	// color.Red.Println(splitedUrl)
+	// panic("stop")
 	return nil, splitedUrl[len(splitedUrl)-2]
 
 }

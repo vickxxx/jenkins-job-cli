@@ -17,13 +17,14 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/gocruncher/jenkins-job-cli/cmd/jj"
-	"github.com/spf13/cobra"
 	"os"
 	"regexp"
 	"strings"
 	"text/tabwriter"
 	"time"
+
+	"github.com/gocruncher/jenkins-job-cli/cmd/jj"
+	"github.com/spf13/cobra"
 )
 
 var (
